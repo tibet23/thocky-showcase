@@ -1,0 +1,168 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&family=Syne+Mono&display=swap');
+
+:root {
+  --bg-primary: #0D0B12;
+  --bg-surface: #13101C;
+  --bg-surface-elevated: #1A1528;
+  --accent-violet: #7C3AED;
+  --accent-lavender: #C4B5FD;
+  --accent-magenta: #D946EF;
+  --accent-tan: #C9A96E;
+  --text-primary: #F0ECF8;
+  --text-muted: #8B7FA8;
+  --border-subtle: rgba(196, 181, 253, 0.12);
+  --border-active: rgba(217, 70, 239, 0.35);
+}
+
+body {
+  background-color: #0D0B12;
+  color: #F0ECF8;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #7C3AED;
+  selection-color: #FFFFFF;
+}
+
+::selection {
+  background-color: rgba(124, 58, 237, 0.4);
+  color: #F0ECF8;
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-syne-mono {
+  font-family: 'Syne Mono', monospace;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Gradient Utilities */
+.gradient-text-hero {
+  background: linear-gradient(135deg, #7C3AED 0%, #D946EF 45%, #C9A96E 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-lavender {
+  background: linear-gradient(135deg, #C4B5FD 0%, #D946EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #F0ECF8 0%, #C9A96E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border-card {
+  position: relative;
+  background: #13101C;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.gradient-border-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.45) 0%, rgba(217, 70, 239, 0.3) 50%, rgba(201, 169, 110, 0.2) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.gradient-border-glow:hover::before {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.8) 0%, rgba(217, 70, 239, 0.7) 50%, rgba(201, 169, 110, 0.5) 100%);
+  transition: all 0.3s ease;
+}
+
+/* Ambient glow mesh */
+.bg-mesh-pattern {
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(217, 70, 239, 0.15) 0%, transparent 35%),
+    radial-gradient(circle at 50% 60%, rgba(201, 169, 110, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(124, 58, 237, 0.14) 0%, transparent 40%);
+}
+
+/* Keycap 3D style */
+.keycap-3d {
+  box-shadow: 
+    0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+    0 -3px 0 0 rgba(0, 0, 0, 0.6) inset,
+    0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.05s ease, box-shadow 0.05s ease, background-color 0.1s ease;
+}
+
+.keycap-3d:active, .keycap-3d.active-pressed {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+    0 -1px 0 0 rgba(0, 0, 0, 0.8) inset,
+    0 1px 4px rgba(217, 70, 239, 0.4);
+}
+
+/* Keycap glow on hit */
+@keyframes keyGlow {
+  0% { filter: drop-shadow(0 0 12px rgba(217, 70, 239, 0.9)); }
+  100% { filter: drop-shadow(0 0 0px transparent); }
+}
+
+.key-glow-anim {
+  animation: keyGlow 0.4s ease-out;
+}
+
+/* Infinite Marquee */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle breathing glow */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.04); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0B12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F1932;
+  border-radius: 4px;
+  border: 1px solid rgba(196, 181, 253, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}

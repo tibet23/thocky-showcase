@@ -1,0 +1,6 @@
+{
+  "name": "Thocky - Mechanical Keyboard Acoustic Simulator",
+  "description": "Zero-latency mechanical keyboard acoustic simulator for Windows featuring high-fidelity switch profiles, impulse modeling, and Microsoft Store integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
