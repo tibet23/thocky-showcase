@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Download, Laptop, Menu, X } from 'lucide-react';
 
-import newLogo from '@/assets/thocy-app-logo.png';
+import newLogo from '@/assets/thocky-app-logo.png';
 
 interface NavbarProps {
   onOpenDownloadModal: () => void;
@@ -46,7 +46,7 @@ export function Navbar({ onOpenDownloadModal }: NavbarProps) {
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#7C3AED] via-[#D946EF] to-[#C9A96E] p-[1.5px] shadow-[0_0_20px_rgba(124,58,237,0.35)] group-hover:shadow-[0_0_25px_rgba(217,70,239,0.6)] transition-all duration-300 overflow-hidden">
             <div className="w-full h-full bg-[#0D0B12] rounded-[10px] flex items-center justify-center overflow-hidden relative">
               <Image
-                src="/thocky-app-logo.png"
+                src={newLogo}
                 alt="Thocky Logo"
                 width={38}
                 height={38}
