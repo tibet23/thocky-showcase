@@ -19,7 +19,7 @@ export function Footer({ onOpenDownloadModal }: FooterProps) {
               <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#7C3AED] via-[#D946EF] to-[#C9A96E] p-[1px] overflow-hidden">
                 <div className="w-full h-full bg-[#0D0B12] rounded-[11px] flex items-center justify-center overflow-hidden relative">
                   <Image
-                    src="/logo.png"
+                    src="/thocky-app-logo.png"
                     alt="Thocky Logo"
                     width={30}
                     height={30}

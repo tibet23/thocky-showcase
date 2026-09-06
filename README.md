@@ -13,7 +13,7 @@
 
 <br />
 
-<img src="./public/logo.png" alt="Thocky Logo" width="140" height="140" style="border-radius: 28px; box-shadow: 0 0 40px rgba(217, 70, 239, 0.4);" />
+<img src="./public/thocky-app-logo.png" alt="Thocky Logo" width="140" height="140" style="border-radius: 28px; box-shadow: 0 0 40px rgba(217, 70, 239, 0.4);" />
 
 <br />
 <br />
