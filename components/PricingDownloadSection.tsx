@@ -62,7 +62,7 @@ export function PricingDownloadSection({ onOpenDownloadModal }: PricingDownloadS
                 1-Day Free Trial
               </h3>
               <p className="text-xs text-[#8B7FA8] mb-6">
-                Experience all 6 acoustic profiles, DSP synthesis sliders, and zero-latency audio on Windows with no upfront payment.
+                24 hours of complete access to all acoustic profiles, DSP features, and modding controls. Requires a $3.99/year subscription after evaluation.
               </p>
 
               <div className="text-3xl font-syne font-extrabold text-[#F0ECF8] mb-6">
@@ -73,30 +73,41 @@ export function PricingDownloadSection({ onOpenDownloadModal }: PricingDownloadS
                 <li className="flex items-start gap-2.5 text-[#F0ECF8]">
                   <Check className="w-4 h-4 text-[#34D399] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-[#F0ECF8]">All 6 Switch Profiles & DSP Controls Unlocked</strong> — Complete access to Creamy Linear, Marbly Poppy, Deep Thock, Buckling Spring, and all acoustic tuning sliders.
+                    <strong className="text-[#F0ECF8]">Full 24-Hour Complete Access</strong> — Test all 6 Switch Profiles (Creamy Linear, Marbly Poppy, Crisp Clack, Deep Thock, Buckling Spring, Glass Ceramic).
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5 text-[#F0ECF8]">
                   <Check className="w-4 h-4 text-[#34D399] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-[#F0ECF8]">Zero-Commitment Instant Test</strong> — Experience instant real-time keyboard synthesis across your daily apps with no credit card required upfront.
+                    <strong className="text-[#F0ECF8]">Complete Customizer Suite & DSP Engine</strong> — Access to lube dampening, spacebar tuning, stereo panning, pitch multiplier, and dual-phase physics during trial.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5 text-[#F0ECF8]">
                   <Check className="w-4 h-4 text-[#34D399] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-[#F0ECF8]">100% Private & Local Execution</strong> — Runs entirely on your machine with zero keystroke logging, cloud telemetry, or data collection.
+                    <strong className="text-[#F0ECF8]">100% Private & Local Execution</strong> — Minimal CPU footprint (&lt; 1% CPU), zero keystroke logging, running non-invasively in system tray.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5 text-[#F0ECF8]">
+                  <Check className="w-4 h-4 text-[#34D399] shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-[#F0ECF8]">Zero Upfront Commitment</strong> — Evaluate full app capabilities across Word, VS Code, Discord, and games for 24 hours.
                   </span>
                 </li>
               </ul>
             </div>
 
-            <button
-              onClick={() => handleDownloadClick('1-Day Free Trial')}
-              className="w-full py-3.5 rounded-xl bg-[#181326] border border-[#C4B5FD]/20 text-[#F0ECF8] font-syne font-bold text-xs uppercase tracking-wider hover:bg-[#201833] hover:border-[#7C3AED] transition-all flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <Download className="w-4 h-4 text-[#C4B5FD]" /> Start 1-Day Free Trial on MS Store
-            </button>
+            <div>
+              <button
+                onClick={() => handleDownloadClick('1-Day Free Trial')}
+                className="w-full py-3.5 rounded-xl bg-[#181326] border border-[#C4B5FD]/20 text-[#F0ECF8] font-syne font-bold text-xs uppercase tracking-wider hover:bg-[#201833] hover:border-[#7C3AED] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Download className="w-4 h-4 text-[#C4B5FD]" /> Start 1-Day Free Trial on MS Store
+              </button>
+              <p className="text-[10px] font-mono-code text-[#8B7FA8] text-center mt-2">
+                Full access for 24 hours. Auto-renews at $3.99/yr unless canceled.
+              </p>
+            </div>
           </div>
 
           {/* Annual Full Subscription (Featured) */}
@@ -132,48 +143,41 @@ export function PricingDownloadSection({ onOpenDownloadModal }: PricingDownloadS
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#D946EF] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-white">Uninterrupted 365-Day Access</strong> — Permanent, continuous background typing acoustics across Word, VS Code, Discord, Slack, and games.
+                    <strong className="text-white">Uninterrupted 365-Day Access</strong> — Continuous background typing acoustics across Word, VS Code, Discord, Slack, and games after trial.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#D946EF] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-white">All 6 Master Acoustic Engines</strong> — Creamy Linear, Marbly Poppy, Crisp Clack, Deep Thock, Buckling Spring, and Glass Ceramic.
+                    <strong className="text-white">All Current & Future Switch Profiles</strong> — Permanent access to all 6 master acoustic engines plus any new sound profiles released.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#D946EF] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-white">Full Acoustic Customizer Suite</strong> — Fine-tune lube dampening, spacebar stabilizer boost, stereo panning, pitch multiplier, and room reverb.
+                    <strong className="text-white">Full Acoustic Customizer Suite & DSP Engine</strong> — Permanent access to fine-tune lube dampening, spacebar boost, panning, pitch, and reverb.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#D946EF] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-white">Independent Dual-Phase Physics</strong> — Realistic keydown bottom-out impact combined with snappy key-release top-out return clacks.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#D946EF] shrink-0 mt-0.5" />
-                  <span>
-                    <strong className="text-white">Ultra-Lightweight & Anti-Cheat Safe</strong> — Minimal resource footprint (&lt; 1% CPU) running non-invasively in the Windows system tray.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#D946EF] shrink-0 mt-0.5" />
-                  <span>
-                    <strong className="text-white">Microsoft Store Verified Licensing</strong> — Seamless automatic updates, secure billing, and 1-click license restore across all your Windows PCs.
+                    <strong className="text-white">Microsoft Store Verified Licensing</strong> — Automatic background updates, secure billing, and 1-click license restore across all your Windows PCs.
                   </span>
                 </li>
               </ul>
             </div>
 
-            <button
-              onClick={() => handleDownloadClick('Annual Pass $3.99/yr')}
-              className="w-full py-4 rounded-xl bg-gradient-to-r from-[#7C3AED] via-[#D946EF] to-[#C9A96E] text-white font-syne font-extrabold text-xs uppercase tracking-wider shadow-[0_0_30px_rgba(217,70,239,0.5)] hover:shadow-[0_0_45px_rgba(217,70,239,0.8)] hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <Laptop className="w-4 h-4" /> Get on Microsoft Store — $3.99 / Year
-            </button>
+            <div>
+              <button
+                onClick={() => handleDownloadClick('Annual Pass $3.99/yr')}
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#7C3AED] via-[#D946EF] to-[#C9A96E] text-white font-syne font-extrabold text-xs uppercase tracking-wider shadow-[0_0_30px_rgba(217,70,239,0.5)] hover:shadow-[0_0_45px_rgba(217,70,239,0.8)] hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Laptop className="w-4 h-4" /> Get on Microsoft Store — $3.99 / Year
+              </button>
+              <p className="text-[10px] font-mono-code text-[#8B7FA8] text-center mt-2">
+                Includes 1-Day Free Trial. Billed at $3.99/year. Cancel anytime.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -197,4 +201,3 @@ export function PricingDownloadSection({ onOpenDownloadModal }: PricingDownloadS
     </section>
   );
 }
-
